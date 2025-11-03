@@ -71,8 +71,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 10px;
+            white-space: nowrap;
         }
 
         .subtitle {
@@ -271,6 +272,61 @@
             }
             .quiz-menu {
                 grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* 태블릿 가로 모드 최적화 (키오스크용) */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                max-width: 95vw;
+                max-height: 95vh;
+                padding: 30px;
+                overflow-y: auto;
+            }
+            .character-image {
+                width: 120px;
+            }
+            h1 {
+                font-size: 2.2em;
+                margin-bottom: 5px;
+            }
+            .subtitle {
+                font-size: 1em;
+                margin-bottom: 15px;
+            }
+            .quiz-menu {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 12px;
+                margin-top: 15px;
+            }
+            .quiz-button {
+                padding: 15px 10px;
+                font-size: 1em;
+            }
+            .question {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+            .option-button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+            .result {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+        }
+
+        /* 큰 태블릿/모니터 가로 모드 */
+        @media (min-width: 1025px) and (orientation: landscape) {
+            .container {
+                max-width: 1200px;
+            }
+            .quiz-menu {
+                grid-template-columns: repeat(6, 1fr);
             }
         }
     </style>
@@ -1001,7 +1057,7 @@ hygLOUQ11+e/0ofMkK/msTQ6zUo5jZ90d3/JNC12vWntcj21800BzeszZMKaZ7PCdDh2gWZ8eG65
 m0yrohF/Zk67lsDmnpk49OMGke7CuzNXVT1JyAtcKw3ytAAAAAAAAAAAAAAAAAAA" 
                  alt="코미 캐릭터" 
                  class="character-image">
-            <h1>🎉 코미와 함께하는<br>문제풀이 🎉</h1>
+            <h1>🎉 코미와 함께하는 문제풀이 🎉</h1>
             <p class="subtitle">재미있게 배우는 COSS 퀴즈!</p>
         </div>
         
