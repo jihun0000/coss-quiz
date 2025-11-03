@@ -1093,9 +1093,8 @@ m0yrohF/Zk67lsDmnpk49OMGke7CuzNXVT1JyAtcKw3ytAAAAAAAAAAAAAAAAAAA"
 
         <div id="quiz1" class="quiz-container">
             <span class="quiz-type">단답형 ✍️</span>
-            <div class="question">COSS는 무엇의 약자일까요?</div>
-            <input type="text" id="answer1" class="answer-input" placeholder="정답을 말로해주세요!">
-            <button class="submit-button" onclick="checkAnswer1()">제출하기</button>
+            <div class="question">COSS는 무엇의 약자일까요?<br><br>정답을 말로 해주세요!</div>
+            <button class="submit-button" onclick="showAnswer1()">정답 보기</button>
             <div id="result1" class="result"></div>
             <button class="home-button" onclick="goHome()">🏠 홈으로 가기</button>
         </div>
@@ -1243,8 +1242,6 @@ m0yrohF/Zk67lsDmnpk49OMGke7CuzNXVT1JyAtcKw3ytAAAAAAAAAAAAAAAAAAA"
                 result.style.display = 'none';
                 result.className = 'result';
             }
-            const input = document.getElementById('answer1');
-            if (input) input.value = '';
             document.querySelectorAll('.option-button').forEach(btn => {
                 btn.classList.remove('correct', 'incorrect');
                 btn.disabled = false;
@@ -1258,18 +1255,11 @@ m0yrohF/Zk67lsDmnpk49OMGke7CuzNXVT1JyAtcKw3ytAAAAAAAAAAAAAAAAAAA"
             document.getElementById('menu').style.display = 'block';
         }
 
-        function checkAnswer1() {
-            const answer = document.getElementById('answer1').value.trim();
+        function showAnswer1() {
             const result = document.getElementById('result1');
-            const correctAnswer = 'Convergence of sharing system';
             result.style.display = 'block';
-            if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
-                result.className = 'result correct';
-                result.innerHTML = '🎉 정답입니다! 🎉<br><strong>Convergence of sharing system</strong>';
-            } else {
-                result.className = 'result incorrect';
-                result.innerHTML = '😢 오답입니다!<br>정답은 <strong>Convergence of sharing system</strong>입니다.';
-            }
+            result.className = 'result correct';
+            result.innerHTML = '✨ 정답은 <strong>Convergence of sharing system</strong>입니다!';
         }
 
         function checkAnswer(quizNum, selected, correct) {
