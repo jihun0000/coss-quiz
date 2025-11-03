@@ -49,6 +49,14 @@
             margin-bottom: 30px;
         }
 
+        .event-title {
+            font-family: 'Gamja Flower', cursive;
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .character-image {
             width: 150px;
             height: auto;
@@ -286,6 +294,10 @@
                 padding: 30px;
                 overflow-y: auto;
             }
+            .event-title {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
             .character-image {
                 width: 120px;
             }
@@ -334,6 +346,7 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="event-title">COSS 미자데이</div>
             <img src="data:image/webp;base64,UklGRnigAABXRUJQVlA4WAoAAAAwAAAAUQMAYQIASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdC
 IFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAA
 AADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlk
@@ -1081,7 +1094,7 @@ m0yrohF/Zk67lsDmnpk49OMGke7CuzNXVT1JyAtcKw3ytAAAAAAAAAAAAAAAAAAA"
         <div id="quiz1" class="quiz-container">
             <span class="quiz-type">단답형 ✍️</span>
             <div class="question">COSS는 무엇의 약자일까요?</div>
-            <input type="text" id="answer1" class="answer-input" placeholder="정답을 말로 해주세요!">
+            <input type="text" id="answer1" class="answer-input" placeholder="답을 입력하세요">
             <button class="submit-button" onclick="checkAnswer1()">제출하기</button>
             <div id="result1" class="result"></div>
             <button class="home-button" onclick="goHome()">🏠 홈으로 가기</button>
